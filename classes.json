@@ -1,0 +1,11 @@
+{
+    "classes": 
+    [
+        {
+            "identifier": "CLASS_IDENTIFIER",
+            "name": "Class Name",
+            "teachers": ["Teacher 1", "Teacher 2"],
+            "meets_link": "https://meet.google.com/"
+        }
+    ]
+}
