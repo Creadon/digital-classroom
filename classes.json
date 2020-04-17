@@ -2,9 +2,9 @@
     "classes": 
     [
         {
-            "identifier": "CLASS_IDENTIFIER",
+            "identifier": "IDENTI01",
             "name": "Class Name",
-            "teachers": ["Teacher 1", "Teacher 2"],
+            "teacher": "Teacher Name",
             "meets_link": "https://meet.google.com/"
         }
     ]
