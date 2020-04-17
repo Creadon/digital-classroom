@@ -84,19 +84,21 @@ body
 
 button
 {
+    transition-duration: 0.5s;
     border: none;
-    border-radius: 10px;
-    width: 328px;
+    border-radius: 16px;
+    width: calc(328px * 1);
     height: 50px;
-    background-color: #5D6187;
+    background-color: rgb(255, 70, 70);
     color: white;
     font-family: avenirLight;
     font-Size: 14px;
     letter-spacing: 1px;
-    box-shadow: 2px 2px 10px lightgray;
+    box-shadow: 0px 0px 10px lightgray;
+    text-shadow: 2px 2px 6px lightgray;
 }
 
-colorPalette
+button:hover
 {
-    color: 
+    box-shadow: 0px 0px 12px rgb(105, 105, 105);
 }
