@@ -1,11 +1,102 @@
+@font-face
+{
+    font-family: avenirLight;
+    src: url(assets/AvenirLTStd-Book.otf);
+}
+
+@font-face
+{
+    font-family: avenirRegular;
+    src: url(assets/AvenirLTStd-Roman.otf);
+}
+
+@font-face
+{
+    font-family: avenirBold;
+    src: url(assets/AvenirLTStd-Medium.otf);
+}
+
 body
 {
-    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: white;
 }
 
 .container 
 {
-    width: 200px;
-    height: 500px;
-    background: black;
+    width: 1200px;
+    height: 250px;
+    background: transparent;
+    margin: calc((100vh - 250px) * 0.5) auto;
+}
+
+.box
+{
+    position: relative;
+    width: 368px;
+    height: 220px;
+    background: white;
+    float: left;
+    margin: 15px;
+    border-radius: 32px;
+    box-shadow: 0px 0px 10px lightgray;
+}
+
+.name
+{
+    padding-top: 16px;
+    padding-left: 20px;
+    font-family: avenirBold;
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 2px lightgray;
+    color: black;
+}
+
+.identifier
+{
+    padding-top: 2px;
+    padding-left: 21px;
+    font-family: avenirRegular;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: darkgray;
+}
+
+.teacher
+{
+    padding-top: 6px;
+    padding-left: 21px;
+    font-family: avenirLight;
+    font-Size: 14px;
+    letter-spacing: 1px;
+    color: darkgray;
+}
+
+.buttonWrapper
+{
+    background-color: transparent;
+    padding-top: 56px;
+    padding-left: 20px;
+}
+
+button
+{
+    border: none;
+    border-radius: 10px;
+    width: 328px;
+    height: 50px;
+    background-color: #5D6187;
+    color: white;
+    font-family: avenirLight;
+    font-Size: 14px;
+    letter-spacing: 1px;
+    box-shadow: 2px 2px 10px lightgray;
+}
+
+colorPalette
+{
+    color: 
 }
