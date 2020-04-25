@@ -2,8 +2,20 @@
     "classes": [
         {
             "identifier": "IDENTI01",
-            "name": "Class Name",
-            "teacher": "Teacher Name",
+            "name": "Class 1",
+            "teacher": "Teacher 1",
+            "meets_link": "https://meet.google.com/"
+        },
+        {
+            "identifier": "IDENTI02",
+            "name": "Class 2",
+            "teacher": "Teacher 2",
+            "meets_link": "https://meet.google.com/"
+        },
+        {
+            "identifier": "IDENTI03",
+            "name": "Class 3",
+            "teacher": "Teacher 3",
             "meets_link": "https://meet.google.com/"
         }
     ]
