@@ -17,6 +17,18 @@
             "name": "Class 3",
             "teacher": "Teacher 3",
             "meets_link": "https://meet.google.com/"
+        },
+        {
+            "identifier": "IDENTI04",
+            "name": "Class 4",
+            "teacher": "Teacher 4",
+            "meets_link": "https://meet.google.com/"
+        },
+        {
+            "identifier": "IDENTI05",
+            "name": "Class 5",
+            "teacher": "Teacher 5",
+            "meets_link": "https://meet.google.com/"
         }
     ]
 }

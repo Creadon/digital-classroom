@@ -15,7 +15,9 @@ app.get('/get', (req, res) => {
 });
 
 app.get('/boxes', (req, res) => {
-    const index = req.query.index;
+    var index = req.query.index;
+    const amount = getClasses().length;
+    var returned = 0;
     var boxes = '';
     var html = fs.readFileSync('box.html').toString();
     getClasses().forEach((element) => {
@@ -23,7 +25,13 @@ app.get('/boxes', (req, res) => {
             .replace('%name%', element['name'])
             .replace('%identifier%', element['identifier'])
             .replace('%teacher%', element['teacher']);
-        boxes += box;
+        if(index <= 0)
+            if(returned != 3) {
+                boxes += box;
+                returned++;
+            }
+        if(index > 0)
+            index--;
     });
     res.status(200).send(boxes);
 });
