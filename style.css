@@ -1,19 +1,19 @@
 @font-face
 {
     font-family: avenirLight;
-    src: url(assets/AvenirLTStd-Book.otf);
+    src: url(http://localhost:5000/asset?name=assets/AvenirLTStd-Book.otf);
 }
 
 @font-face
 {
     font-family: avenirRegular;
-    src: url(assets/AvenirLTStd-Roman.otf);
+    src: url(http://localhost:5000/asset?name=assets/AvenirLTStd-Roman.otf);
 }
 
 @font-face
 {
     font-family: avenirBold;
-    src: url(assets/AvenirLTStd-Medium.otf);
+    src: url(http://localhost:5000/asset?name=assets/AvenirLTStd-Medium.otf);
 }
 
 body
