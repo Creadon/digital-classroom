@@ -24,14 +24,13 @@ app.get('/boxes', (req, res) => {
         var box = html
             .replace('%name%', element['name'])
             .replace('%identifier%', element['identifier'])
-            .replace('%teacher%', element['teacher']);
-        if(index <= 0)
-            if(returned != 3) {
-                boxes += box;
-                returned++;
-            }
-        if(index > 0)
-            index--;
+            .replace('%teacher%', element['teacher'])
+            .replace('%meets_link%', element['meets_link']);
+        if (index <= 0 && returned != 3) {
+            boxes += box;
+            returned++;
+        }
+        if (index > 0) index--;
     });
     res.status(200).send(boxes);
 });
