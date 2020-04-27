@@ -3,10 +3,15 @@ const root = require('root');
 const express = require('express');
 const fs = require('fs');
 const app = express();
+const ip = require('ip');
+var host = ip.address();
 const port = 5000;
 
 app.get('/', (req, res) => {
-    res.status(200).sendFile(path.resolve(process.cwd(), 'index.html'));
+    var html = fs.readFileSync('index.html').toString()
+        .replace('%host%', host).replace('%host%', host)
+        .replace('%port%', port).replace('%port%', port);
+    res.status(200).send(html);
 });
 
 app.get('/get', (req, res) => {
@@ -43,4 +48,4 @@ function getClasses() {
     return JSON.parse(fs.readFileSync('classes.json'))['classes'];
 }
 
-app.listen(port, () => console.log('App running (CTRL + C to stop) \n > localhost:' + port));
+app.listen(port, () => console.log('App running (CTRL + C to stop) \n > ' + host + ':' + port));
