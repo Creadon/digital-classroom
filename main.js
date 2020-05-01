@@ -8,35 +8,39 @@ var host = ip.address();
 const port = 5000;
 
 app.get('/', (req, res) => {
-	var html = fs
-		.readFileSync('index.html')
-		.toString()
-		.replace('%host%', host)
-		.replace('%host%', host)
-		.replace('%port%', port)
-		.replace('%port%', port);
+	var html = replaceAll(
+		replaceAll(
+			fs.readFileSync('index.html').toString(), 
+			'%host%',
+			host),
+		'%port%',
+		port
+	);
 	res.status(200).send(html);
 });
 
 app.get('/script', (req, res) => {
-    var script = fs
-        .readFileSync('script.js')
-        .toString()
-        .replace('%host%', host).replace('%host%', host)
-        .replace('%port%', port).replace('%port%', port);
-    res.status(200).send(script);
+	var script = replaceAll(
+		replaceAll(
+			fs.readFileSync('script.js').toString(), 
+			'%host%',
+			host),
+		'%port%',
+		port
+	);
+	res.status(200).send(script);
 });
 
 app.get('/style', (req, res) => {
-    var style = fs
-        .readFileSync('style.css')
-        .toString()
-        .replace('%host%', host)
-        .replace('%host%', host)
-        .replace('%host%', host)
-		.replace('%port%', port)
-        .replace('%port%', port)
-        .replace('%port%', port);
+	var style = replaceAll(
+		replaceAll(
+			fs.readFileSync('style.css').toString(), 
+			'%host%',
+			host),
+		'%port%',
+		port
+	);
+	res.status(200).set('Content-Type', 'text/css').send(style);
 });
 
 app.get('/get', (req, res) => {
@@ -68,6 +72,13 @@ app.get('/boxes', (req, res) => {
 app.get('/amount', (req, res) => {
 	res.status(200).send(getClasses().length.toString());
 });
+
+function replaceAll(input, toReplace, replaceWith) {
+	while (input.includes(toReplace)) {
+		input = input.replace(toReplace, replaceWith);
+	}
+	return input;
+}
 
 function getClasses() {
 	return JSON.parse(fs.readFileSync('classes.json'))['classes'];
