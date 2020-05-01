@@ -8,38 +8,17 @@ var host = ip.address();
 const port = 5000;
 
 app.get('/', (req, res) => {
-	var html = replaceAll(
-		replaceAll(
-			fs.readFileSync('index.html').toString(), 
-			'%host%',
-			host),
-		'%port%',
-		port
-	);
+	var html = replaceHostname(fs.readFileSync('index.html').toString());
 	res.status(200).send(html);
 });
 
 app.get('/script', (req, res) => {
-	var script = replaceAll(
-		replaceAll(
-			fs.readFileSync('script.js').toString(), 
-			'%host%',
-			host),
-		'%port%',
-		port
-	);
+	var script = replaceHostname(fs.readFileSync('script.js').toString());
 	res.status(200).send(script);
 });
 
 app.get('/style', (req, res) => {
-	var style = replaceAll(
-		replaceAll(
-			fs.readFileSync('style.css').toString(), 
-			'%host%',
-			host),
-		'%port%',
-		port
-	);
+	var style = replaceHostname(fs.readFileSync('style.css').toString());
 	res.status(200).set('Content-Type', 'text/css').send(style);
 });
 
@@ -73,10 +52,11 @@ app.get('/amount', (req, res) => {
 	res.status(200).send(getClasses().length.toString());
 });
 
-function replaceAll(input, toReplace, replaceWith) {
-	while (input.includes(toReplace)) {
-		input = input.replace(toReplace, replaceWith);
-	}
+function replaceHostname(input) {
+	while(input.includes('%host%'))
+		input = input.replace('%host%', host);
+	while(input.includes('%port%'))
+		input = input.replace('%port%', port);
 	return input;
 }
 
