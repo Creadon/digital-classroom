@@ -5,7 +5,7 @@ const fs = require('fs');
 const app = express();
 const ip = require('ip');
 var host = ip.address();
-const port = 5000;
+const port = 5001;
 
 app.get('/', (req, res) => {
 	var html = replaceHostname(fs.readFileSync('index.html').toString());
