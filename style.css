@@ -1,23 +1,19 @@
-@font-face
-{
+@font-face {
     font-family: avenirLight;
     src: url(http://%host%:%port%/get?name=assets/AvenirLTStd-Book.otf);
 }
 
-@font-face
-{
+@font-face {
     font-family: avenirRegular;
     src: url(http://%host%:%port%/get?name=assets/AvenirLTStd-Roman.otf);
 }
 
-@font-face
-{
+@font-face {
     font-family: avenirBold;
     src: url(http://%host%:%port%/get?name=assets/AvenirLTStd-Medium.otf);
 }
 
-body
-{
+body {
     transition-duration: 0.5s;
     margin: 0;
     padding: 0;
@@ -25,23 +21,20 @@ body
     background: white;
 
     -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 3s; /* Firefox < 16 */
-        -ms-animation: fadein 3s; /* Internet Explorer */
-         -o-animation: fadein 3s; /* Opera < 12.1 */
-            animation: fadein 3s;
-
+    -moz-animation: fadein 3s; /* Firefox < 16 */
+    -ms-animation: fadein 3s; /* Internet Explorer */
+    -o-animation: fadein 3s; /* Opera < 12.1 */
+    animation: fadein 3s;
 }
 
-.container 
-{
+.container {
     width: 1314px;
     height: 250px;
     background: transparent;
     margin: calc((100vh - 250px) * 0.5) auto;
 }
 
-.navigator 
-{
+.navigator {
     position: relative;
     width: 60px;
     height: 60px;
@@ -54,21 +47,19 @@ body
     transition-duration: 0.5s;
 }
 
-.navigatorButton
-{
+.navigatorButton {
     border: none;
     width: 60px;
     height: 60px;
     background-color: transparent;
     color: black;
     font-family: avenirBold;
-    font-Size: 20px;
+    font-size: 20px;
     text-shadow: 2px 2px 6px lightgray;
     transition-duration: 0.5s;
 }
 
-.box
-{
+.box {
     position: relative;
     width: 368px;
     height: 220px;
@@ -80,13 +71,11 @@ body
     transition-duration: 0.5s;
 }
 
-.box:hover
-{
-    box-shadow: 0px 0px 10px rgb(105, 105, 105);;
+.box:hover {
+    box-shadow: 0px 0px 10px rgb(105, 105, 105);
 }
 
-.name
-{
+.name {
     padding-top: 16px;
     padding-left: 20px;
     font-family: avenirBold;
@@ -96,8 +85,7 @@ body
     color: black;
 }
 
-.identifier
-{
+.identifier {
     padding-top: 2px;
     padding-left: 21px;
     font-family: avenirRegular;
@@ -106,25 +94,22 @@ body
     color: darkgray;
 }
 
-.teacher
-{
+.teacher {
     padding-top: 6px;
     padding-left: 21px;
     font-family: avenirLight;
-    font-Size: 14px;
+    font-size: 14px;
     letter-spacing: 1px;
     color: darkgray;
 }
 
-.buttonWrapper
-{
+.buttonWrapper {
     background-color: transparent;
     padding-top: 56px;
     padding-left: 20px;
 }
 
-.boxButton
-{
+.boxButton {
     border: none;
     border-radius: 16px;
     width: 328px;
@@ -132,39 +117,54 @@ body
     background-color: white;
     color: black;
     font-family: avenirLight;
-    font-Size: 14px;
+    font-size: 14px;
     letter-spacing: 1px;
     box-shadow: 0px 0px 4px lightgray;
     text-shadow: 2px 2px 6px lightgray;
     transition-duration: 0.5s;
 }
 
-.boxButton:hover
-{
+.boxButton:hover {
     box-shadow: 6px 6px 12px rgb(105, 105, 105);
     background-color: rgb(250, 250, 250);
     letter-spacing: 2px;
 }
 
 @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Firefox < 16 */
 @-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Internet Explorer */
 @-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
