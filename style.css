@@ -1,16 +1,16 @@
 @font-face {
     font-family: avenirLight;
-    src: url(http://%host%:%port%/get?name=assets/AvenirLTStd-Book.otf);
+    src: url(/get?name=assets/AvenirLTStd-Book.otf);
 }
 
 @font-face {
     font-family: avenirRegular;
-    src: url(http://%host%:%port%/get?name=assets/AvenirLTStd-Roman.otf);
+    src: url(/get?name=assets/AvenirLTStd-Roman.otf);
 }
 
 @font-face {
     font-family: avenirBold;
-    src: url(http://%host%:%port%/get?name=assets/AvenirLTStd-Medium.otf);
+    src: url(/get?name=assets/AvenirLTStd-Medium.otf);
 }
 
 body {

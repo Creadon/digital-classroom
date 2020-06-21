@@ -17,7 +17,7 @@ document.getElementById('right').onclick = function () {
 
 function updateClasses() {
     const Http = new XMLHttpRequest();
-    const url = 'http://%host%:%port%/boxes?index=' + index;
+    const url = '/boxes?index=' + index;
     Http.open('GET', url, true);
     Http.send();
 
@@ -28,7 +28,7 @@ function updateClasses() {
 
 function getAmount() {
     const Http = new XMLHttpRequest();
-    const url = 'http://%host%:%port%/amount';
+    const url = '/amount';
     Http.open('GET', url, true);
     Http.send();
 
